@@ -137,6 +137,29 @@ ul.con .acts a{color:var(--accent);font-weight:600;text-decoration:none}
 .todo .when{display:inline-block;text-align:center;font:700 .74rem/1.2 var(--sans);letter-spacing:.04em;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 40%,transparent);border-radius:8px;padding:8px 4px}
 .todo b{display:block;font-size:1rem;margin-bottom:2px}
 .todo p{margin:0 0 10px;font-size:.88rem;color:var(--muted)}
+
+.prep{display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(20px,3vw,40px);align-items:start}
+.checklist{list-style:none;margin:0;padding:0;background:var(--bg);border:1px solid var(--line);border-radius:12px}
+.checklist li{display:grid;grid-template-columns:22px 1fr;gap:14px;padding:18px clamp(14px,2vw,22px)}
+.checklist li+li{border-top:1px solid var(--line)}
+.ck{width:20px;height:20px;border:2px solid var(--accent);border-radius:50%;margin-top:2px}
+.checklist .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.checklist b{font-size:1rem}
+.checklist .when{font:700 .7rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+.checklist p{margin:4px 0 8px;font-size:.88rem;color:var(--muted)}
+.checklist .links{display:flex;gap:6px 18px;flex-wrap:wrap}
+.checklist .links a{font-size:.85rem;font-weight:700;color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+.budget{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:20px clamp(16px,2vw,24px);position:sticky;top:76px}
+.budget ul{list-style:none;margin:12px 0 0;padding:0}
+.budget li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.budget li div{display:flex;flex-direction:column}
+.budget li span{font-size:.92rem}
+.budget li small{font-size:.75rem;color:var(--muted)}
+.budget li b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.budget .tot{display:flex;justify-content:space-between;align-items:baseline;padding-top:14px}
+.budget .tot b{font:600 2rem/1 var(--serif);color:var(--accent)}
+.budget p{margin:8px 0 0;font-size:.76rem;color:var(--muted)}
+@media (max-width:900px){.prep{grid-template-columns:1fr}.budget{position:static}}
 </style></head><body>
 <header class="bar"><div class="wrap"><a class="brand" href="#top">Garmisch</a><nav><a class="dchip" href="#se"><small>Se</small><b>3</b></a><a class="dchip" href="#sv"><small>Sv</small><b>4</b></a><a class="dchip" href="#p"><small>P</small><b>5</b></a><a class="dchip" href="#ot"><small>O</small><b>6</b></a><a class="dchip info" href="#info"><small>Info</small><b>i</b></a></nav></div></header>
 <main id="top">
@@ -152,9 +175,16 @@ ul.con .acts a{color:var(--accent);font-weight:600;text-decoration:none}
  <div class="cta"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Am+Lyzeum+3,+82467+Garmisch-Partenkirchen" target="_blank" rel="noopener">Māja Google Maps</a><a class="btn line" href="#todo">Kas vēl jāizdara</a></div>
 </div></section>
 
-<section id="todo" class="alt tight"><div class="wrap two">
- <div><span class="label">Pirms brauciena</span><h2>Vēl jāizdara</h2><ol class="todos"><li class="todo"><span class="when">Pk 2.10.</span><div><b>Airbnb online check-in</b><p>Saite atnāks automātiski. Vajag visu 8 cilvēku datus - no tiem Mikail taisa Gästekartes.</p><div class="acts"><a class="btn sm" href="https://www.airbnb.com/trips" target="_blank" rel="noopener">Airbnb ceļojumi ↗</a></div></div></li><li class="todo"><span class="when">Se rītā</span><div><b>Alpspitzbahn biļetes pirmdienai</b><p>Kad Mikail atsūtīs digitālās Gästekartes - pirkt online ar kartes numuru (−30 %, ~27 € 39 € vietā).</p><div class="acts"><a class="btn sm" href="https://zugspitze.skiperformance.com/de/store" target="_blank" rel="noopener">Zugspitzbahn veikals ↗</a></div></div></li><li class="todo"><span class="when">Līdz O</span><div><b>Zugspitze biļetes</b><p>78 € katram, online.</p><div class="acts"><a class="btn sm" href="https://zugspitze.skiperformance.com/de/store" target="_blank" rel="noopener">Zugspitzbahn veikals ↗</a></div></div></li><li class="todo"><span class="when">Se</span><div><b>Vilciens lidosta → Garmisch</b><p>MVV lietotnē, Gruppen-Tageskarte (1 biļete = līdz 5 cilvēkiem).</p><div class="acts"><a class="btn sm" href="https://www.mvv-muenchen.de/fahrt-planen/mvv-app/" target="_blank" rel="noopener">MVV lietotne ↗</a></div></div></li><li class="todo"><span class="when">Līdz Pk</span><div><b>Vakariņu apstiprinājumi</b><p>Ja Wildschütz (Sv) vai Renzo (P) neatbild - piezvanīt.</p><div class="acts"><a class="btn sm line" href="tel:+4988213290">Wildschütz</a><a class="btn sm line" href="tel:+4988214171">Renzo</a></div></div></li></ol></div>
- <div><span class="label">Uz vietas</span><h2>Vēl jāmaksā</h2><div class="kv"><span>Kurbeitrag (tūrisma nodoklis)</span><span>9 € katram · Mikail atsūtīs, kā maksāt</span><span>Ferratas ekipējums</span><span>30 € skaidrā, kāpējiem</span><span>Alpspitzbahn</span><span>~27 € online ar Gästekarti</span><span>Zugspitze</span><span>78 € online</span><span>Zugspitzbahn vilciens</span><span>Hammersbach 4,80 € · Kreuzeck 3 €</span><span>Höllentalklamm</span><span>7 € skaidrā</span></div></div>
+<section id="todo" class="alt tight"><div class="wrap">
+ <span class="label">Pirms brauciena</span><h2>Vēl jāizdara</h2>
+ <div class="prep">
+  <ol class="checklist"><li><span class="ck" aria-hidden="true"></span><div class="tx"><div class="row"><b>Airbnb online check-in</b><span class="when">Pk 2.10.</span></div><p>Saite atnāks automātiski. Vajag visu 8 cilvēku datus - no tiem Mikail taisa Gästekartes.</p><div class="links"><a href="https://www.airbnb.com/trips" target="_blank" rel="noopener">Airbnb ceļojumi ↗</a></div></div></li><li><span class="ck" aria-hidden="true"></span><div class="tx"><div class="row"><b>Alpspitzbahn biļetes pirmdienai</b><span class="when">Se rītā</span></div><p>Kad Mikail atsūtīs digitālās Gästekartes - pirkt online ar kartes numuru (−30 %, ~27 € 39 € vietā).</p><div class="links"><a href="https://zugspitze.skiperformance.com/de/store" target="_blank" rel="noopener">Zugspitzbahn veikals ↗</a></div></div></li><li><span class="ck" aria-hidden="true"></span><div class="tx"><div class="row"><b>Zugspitze biļetes</b><span class="when">Līdz O</span></div><p>78 € katram, online.</p><div class="links"><a href="https://zugspitze.skiperformance.com/de/store" target="_blank" rel="noopener">Zugspitzbahn veikals ↗</a></div></div></li><li><span class="ck" aria-hidden="true"></span><div class="tx"><div class="row"><b>Vilciens lidosta → Garmisch</b><span class="when">Se</span></div><p>MVV lietotnē, Gruppen-Tageskarte (1 biļete = līdz 5 cilvēkiem).</p><div class="links"><a href="https://www.mvv-muenchen.de/fahrt-planen/mvv-app/" target="_blank" rel="noopener">MVV lietotne ↗</a></div></div></li><li><span class="ck" aria-hidden="true"></span><div class="tx"><div class="row"><b>Vakariņu apstiprinājumi</b><span class="when">Līdz Pk</span></div><p>Ja Wildschütz (Sv) vai Renzo (P) neatbild - piezvanīt.</p><div class="links"><a href="tel:+4988213290">Wildschütz</a><a href="tel:+4988214171">Renzo</a></div></div></li></ol>
+  <aside class="budget"><span class="label">Vēl jāmaksā · katram</span>
+   <ul><li><div><span>Vilciens lidosta ↔ Garmisch</span><small>MVV grupas biļete</small></div><b>~10 € × 2</b></li><li><div><span>Kurbeitrag</span><small>Mikail atsūtīs, kā maksāt</small></div><b>9 €</b></li><li><div><span>Höllentalklamm</span><small>skaidrā</small></div><b>7 €</b></li><li><div><span>Zugspitzbahn vilciens</span><small>Hammersbach 4,80 · Kreuzeck 3</small></div><b>~8 €</b></li><li><div><span>Ferratas ekipējums</span><small>skaidrā, kāpējiem</small></div><b>30 €</b></li><li><div><span>Alpspitzbahn</span><small>online ar Gästekarti</small></div><b>~27 €</b></li><li><div><span>Zugspitze</span><small>online</small></div><b>78 €</b></li></ul>
+   <div class="tot"><span>Kopā aptuveni</span><b>~179 €</b></div>
+   <p>Kāpējam. Kas nekāpj ferratā - bez ekipējuma un Alpspitzbahn.</p>
+  </aside>
+ </div>
 </div></section>
 
 <section id="se" class="day">
