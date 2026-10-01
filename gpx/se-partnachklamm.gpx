@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.1" creator="Garmisch 2026" xmlns="http://www.topografix.com/GPX/1/1">
-<metadata><name>Sestdiena - Partnachklamm</name></metadata>
+<metadata><name>Sestdiena - Partnachklamm (6,1 km)</name></metadata>
 <wpt lat="47.469496" lon="11.119331"><name>Partnachklamm kase</name></wpt>
 <wpt lat="47.465695" lon="11.133035"><name>Eckbauerbahn augšstacija / Berggasthof Eckbauer</name></wpt>
 <wpt lat="47.4743" lon="11.169"><name>Wamberg</name></wpt>
 <wpt lat="47.48166" lon="11.11913"><name>Eckbauerbahn lejas stacija</name></wpt>
 <wpt lat="47.49597" lon="11.10482"><name>Mājas</name></wpt>
-<trk><name>PARTNACHKLAMM: no Olimpiskā stadiona caur aizu un atpakaļ (6,1 km, +200 m)</name><trkseg>
+<wpt lat="47.4914" lon="11.09759"><name>Garmisch-Partenkirchen stacija</name></wpt>
+<wpt lat="47.49331" lon="11.08588"><name>Vakariņas: Gasthaus zur Schranne 19:15</name></wpt>
+<trk><name>Sestdiena - Partnachklamm (6,1 km)</name><trkseg>
 <trkpt lat="47.481611" lon="11.119462"><ele>737.0</ele></trkpt>
 <trkpt lat="47.481681" lon="11.119506"><ele>736.25</ele></trkpt>
 <trkpt lat="47.481770" lon="11.119643"><ele>735.25</ele></trkpt>
